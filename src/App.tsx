@@ -41,39 +41,15 @@ const ActionsButtons={
       if(weightGround && squareMeterGrount && lengthGrount){
       
          let area= parseInt(weightGround) * parseInt(squareMeterGrount)
-         area.toFixed(2)
-         let price=area * squareMeterGrount
-          price.toFixed(2)
+         let price=weightGround * lengthGrount * parseInt(squareMeterGrount)
         
-        setAreaGrount(area)
-        setPriceGrount(price)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
+        
+        setAreaGrount(area.toFixed(2))
+        setPriceGrount(price.toFixed(2))
+   
       }else{
         alert('Todos os campos devem ser preenchidos')
       }
-
-
-
-
-
-
-
-
-
 
   },
   reset:()=>{
@@ -94,33 +70,25 @@ const ActionsButtons={
     <Header />
    <S.ContainerApplication>
     <S.AppCalculador>
-      <p>Calcule informações de Aréa e preço de um Terreno :</p>
-      <S.containerInputs>
-          <Input placeholder='Largura do Terreno'    stateValue={weightGround} funcValue={ActionsInputs.changeWeight} />
-          <Input placeholder='Comprimento do Terreno'    stateValue={squareMeterGrount} funcValue={ActionsInputs.changeSquareMeter} />
-          <Input placeholder='Valor do Metro Quadrado'    stateValue={lengthGrount} funcValue={ActionsInputs.changeLength}  />
-          </S.containerInputs>
-      <S.containerButtons>
-            <button onClick={ActionsButtons.calculate}>calcular</button>
-            <div className='btn-reset' onClick={ActionsButtons.reset}>{iconReturn}</div>
-      </S.containerButtons>
-  <S.ContainerData>
-    <div> Aréa do Terreno : {areaGrount}</div>
-    <div> Preço do Terreno : {priceGrount}</div>
-  </S.ContainerData>
-
-
+          <p>Calcule informações de Aréa e Preço de um Terreno :</p>
+          <S.containerInputs>
+              <Input placeholder='Largura do Terreno  - sem casas decimais'    stateValue={weightGround} funcValue={ActionsInputs.changeWeight} />
+              <Input placeholder='Comprimento do Terreno - sem casas decimais'    stateValue={squareMeterGrount} funcValue={ActionsInputs.changeSquareMeter} />
+              <Input placeholder='Valor do Metro Quadrado - sem casas decimais'    stateValue={lengthGrount} funcValue={ActionsInputs.changeLength}  />
+              </S.containerInputs>
+          <S.containerButtons>
+                <button onClick={ActionsButtons.calculate}>calcular</button>
+                <div className='btn-reset' onClick={ActionsButtons.reset}>{iconReturn}</div>
+          </S.containerButtons>
+          <S.ContainerData>
+            <div> Aréa do Terreno : {areaGrount}</div>
+            <div> Preço do Terreno : {priceGrount}</div>
+          </S.ContainerData>
 
     </S.AppCalculador>
    </S.ContainerApplication>
   </S.AppContainer>
-  
-  
-  
-  
-  
-  
-  
+ 
   </>
 
 
