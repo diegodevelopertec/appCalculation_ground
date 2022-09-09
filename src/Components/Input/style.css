@@ -1,0 +1,17 @@
+
+input{
+    border: none;
+    padding: 20px;
+    text-align: center;
+    margin-top: 14px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 18px;
+    background-color: #3d374a;
+   
+}
+input:focus{
+    outline: 2px solid #4a3f62;
+}
