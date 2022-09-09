@@ -9,11 +9,13 @@ const iconReturn=<img src="https://img.icons8.com/color/48/000000/return.png"/>
 
 const App=()=>{
 
-  const [areaGrount,setAreaGrount]=useState('00')
-  const [priceGrount,setPriceGrount]=useState('00')
-  const [weightGround,setWeightGround]=useState('')
-  const [squareMeterGrount,setSquareMeterGrount]=useState('')
-  const [lengthGrount,setLengthGrount]=useState('')
+  const [areaGrount,setAreaGrount]=useState<string | number | any >('00')
+  const [priceGrount,setPriceGrount]=useState<string | number | any>('00')
+
+
+  const [weightGround,setWeightGround]=useState<string | number | any >('')
+  const [squareMeterGrount,setSquareMeterGrount]=useState<string | number | any>('')
+  const [lengthGrount,setLengthGrount]=useState<string | number | any>('')
 
 
 const ActionsInputs={
@@ -32,6 +34,60 @@ const ActionsInputs={
 
 
 
+const ActionsButtons={
+  calculate:()=>{
+
+
+      if(weightGround && squareMeterGrount && lengthGrount){
+      
+         let area= parseInt(weightGround) * parseInt(squareMeterGrount)
+         area.toFixed(2)
+         let price=area * squareMeterGrount
+          price.toFixed(2)
+        
+        setAreaGrount(area)
+        setPriceGrount(price)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      }else{
+        alert('Todos os campos devem ser preenchidos')
+      }
+
+
+
+
+
+
+
+
+
+
+  },
+  reset:()=>{
+    setAreaGrount('00')
+    setPriceGrount('00')
+    setWeightGround('')
+    setSquareMeterGrount('')
+    setLengthGrount('')
+
+  }
+
+
+  }
+
 
   return <>
   <S.AppContainer>
@@ -45,8 +101,8 @@ const ActionsInputs={
           <Input placeholder='Valor do Metro Quadrado'    stateValue={lengthGrount} funcValue={ActionsInputs.changeLength}  />
           </S.containerInputs>
       <S.containerButtons>
-            <button>calcular</button>
-            <div className='btn-reset'>{iconReturn}</div>
+            <button onClick={ActionsButtons.calculate}>calcular</button>
+            <div className='btn-reset' onClick={ActionsButtons.reset}>{iconReturn}</div>
       </S.containerButtons>
   <S.ContainerData>
     <div> Aréa do Terreno : {areaGrount}</div>

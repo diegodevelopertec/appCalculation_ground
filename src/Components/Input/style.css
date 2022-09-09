@@ -10,8 +10,20 @@ input{
     border-bottom-right-radius: 10px;
     font-size: 18px;
     background-color: #3d374a;
+  color: #5b5469;;
    
 }
 input:focus{
     outline: 2px solid #4a3f62;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }

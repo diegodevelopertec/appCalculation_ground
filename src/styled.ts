@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 
 export const AppContainer=styled.div`
-height: 100vh;
+min-height: 100vh;
 width: 100vw;
 background-color: #08071f;
 display: flex;
@@ -10,6 +10,16 @@ flex-direction:column;
 color:white;
 p{
     margin-top: 20px;
+}
+
+
+@media screen and (max-width:980px){
+height:100%;
+padding:20px;
+width: 100%;
+padding-bottom: 100px;
+
+
 }
 `
 
@@ -32,6 +42,16 @@ flex-direction: column;
 padding: 15px;
 box-shadow: 0 0 10px  #2b1e45;
 border-radius: 15px;
+
+
+@media screen and (max-width:980px){
+height:100%;
+padding:20px;
+width: 100%;
+padding-bottom: 100px;
+
+
+}
 
 `
 export const containerInputs=styled.div`
