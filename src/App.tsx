@@ -72,9 +72,9 @@ const ActionsButtons={
     <S.AppCalculador>
           <p>Calcule informações de Aréa e Preço de um Terreno :</p>
           <S.containerInputs>
-              <Input placeholder='Largura do Terreno  - sem casas decimais'    stateValue={weightGround} funcValue={ActionsInputs.changeWeight} />
-              <Input placeholder='Comprimento do Terreno - sem casas decimais'    stateValue={squareMeterGrount} funcValue={ActionsInputs.changeSquareMeter} />
-              <Input placeholder='Valor do Metro Quadrado - sem casas decimais'    stateValue={lengthGrount} funcValue={ActionsInputs.changeLength}  />
+              <Input placeholder='Largura do Terreno '    stateValue={weightGround} funcValue={ActionsInputs.changeWeight} />
+              <Input placeholder='Comprimento do Terreno '    stateValue={squareMeterGrount} funcValue={ActionsInputs.changeSquareMeter} />
+              <Input placeholder='Valor do Metro Quadrado '    stateValue={lengthGrount} funcValue={ActionsInputs.changeLength}  />
               </S.containerInputs>
           <S.containerButtons>
                 <button onClick={ActionsButtons.calculate}>calcular</button>
