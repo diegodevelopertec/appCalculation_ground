@@ -7,7 +7,7 @@ export const Header=()=>{
     return <>
     <S.containerHeader>
         <div className="title-app">
-            Calculation Grount
+            Calculator Grount
         </div>
         <div className="github">
           <a href="https://github.com/diegodevelopertec">  Desenvolvido por Diego Morais {iconGit}</a>

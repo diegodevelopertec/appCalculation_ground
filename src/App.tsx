@@ -52,6 +52,7 @@ const ActionsButtons={
       }
 
   },
+
   reset:()=>{
     setAreaGrount('00')
     setPriceGrount('00')
@@ -78,7 +79,7 @@ const ActionsButtons={
               </S.containerInputs>
           <S.containerButtons>
                 <button onClick={ActionsButtons.calculate}>calcular</button>
-                <div className='btn-reset' onClick={ActionsButtons.reset}>{iconReturn}</div>
+                <div className='btn-reset' title='limpar tudo' onClick={ActionsButtons.reset}>{iconReturn}</div>
           </S.containerButtons>
           <S.ContainerData>
             <div> Aréa do Terreno : {areaGrount}</div>
