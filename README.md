@@ -6,7 +6,8 @@
 <ul>
     <li> ✔ Esse é um projeto em React com Typescript</li>
     <li> ✔ Esse projeto calcula o preço  e área de um Terreno</li>
-    <li> ✔  👨‍💻 Projeto Finalizado </li>
+    <li> ✔  👨‍💻 Projeto Finalizado </li>  
+    <li>hospedado em : https://calculado-area-e-precodeterreno.netlify.app/ </li>
 
 </ul>
 
